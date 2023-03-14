@@ -1,0 +1,33 @@
+ {
+  "title": "Automated recurring message",
+  "cardHeader": "When do you want to send the message?",
+  "creator": {
+    "name": "Odd Karsten Svartaas",
+    "profileImage": "https://www.gravatar.com/avatar/882745ebeb74a88aaa3540390c14f2c1"
+  },
+  "createdUtc": "2017-02-14T06:08:39Z",
+  "viewUrl": "https://adaptivecards.io",
+  "peopleToMention": {},
+  "peopleToAtMentionData": {
+    "type": "Data.Query",
+    "dataset": "graph.microsoft.com/users?scope=currentContext"
+  },
+  "properties": [
+    {
+      "key": "Board",
+      "value": "Adaptive Cards"
+    },
+    {
+      "key": "List",
+      "value": "Backlog"
+    },
+    {
+      "key": "Assigned to",
+      "value": "Matt Hidinger"
+    },
+    {
+      "key": "Due date",
+      "value": "Not set"
+    }
+  ]
+}
