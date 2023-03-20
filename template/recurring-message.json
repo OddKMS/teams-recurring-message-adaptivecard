@@ -1,0 +1,116 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "${title}",
+            "weight": "Bolder",
+            "size": "ExtraLarge",
+            "spacing": "None"
+        },
+        {
+            "type": "TextBlock",
+            "text": "${cardHeader}",
+            "weight": "Bolder",
+            "size": "Medium",
+            "spacing": "ExtraLarge"
+        },
+        {
+            "type": "TextBlock",
+            "wrap": true,
+            "text": "Choose days:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Input.ChoiceSet",
+                            "choices": [
+                                {
+                                    "$data": "${subArray(scheduledDays, 0, 3)}",
+                                    "title": "${day}",
+                                    "value": "${value}"
+                                }
+                            ],
+                            "spacing": "None",
+                            "id": "scheduleDays1",
+                            "isMultiSelect": true,
+                            "separator": true
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Input.ChoiceSet",
+                            "choices": [
+                                {
+                                    "$data": "${subArray(scheduledDays, 3, 5)}",
+                                    "title": "${day}",
+                                    "value": "${value}"
+                                }
+                            ],
+                            "isMultiSelect": true,
+                            "separator": true,
+                            "id": "scheduleDays2"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Small",
+            "style": "emphasis"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Time:",
+            "wrap": true,
+            "size": "Small"
+        },
+        {
+            "type": "Input.Time",
+            "id": "scheduledTime",
+            "spacing": "Small"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Message:",
+            "size": "Small"
+        },
+        {
+            "placeholder": "Message to send",
+            "type": "Input.Text",
+            "spacing": "Small",
+            "id": "messageToSend",
+            "isMultiline": true
+        },
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "People to @mention"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "choices.data": "$peopleToAtMentionData",
+            "id": "peopleToAtMention",
+            "isMultiSelect": true
+        },
+        {
+            "type": "Input.Toggle",
+            "id": "messageActive",
+            "spacing": "Small",
+            "value": "true",
+            "title": "Automated message is active",
+            "separator": true
+        }
+    ]
+}

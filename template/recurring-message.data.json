@@ -1,4 +1,4 @@
- {
+{
   "title": "Automated recurring message",
   "cardHeader": "When do you want to send the message?",
   "creator": {
@@ -7,11 +7,32 @@
   },
   "createdUtc": "2017-02-14T06:08:39Z",
   "viewUrl": "https://adaptivecards.io",
-  "peopleToMention": {},
   "peopleToAtMentionData": {
     "type": "Data.Query",
     "dataset": "graph.microsoft.com/users?scope=currentContext"
   },
+  "scheduledDays": [
+    {
+      "day": "Monday",
+      "value": "1"
+    },
+    {
+      "day": "Tuesday",
+      "value": "2"
+    },
+    {
+      "day": "Wednesday",
+      "value": "3"
+    },
+    {
+      "day": "Thursday",
+      "value": "4"
+    },
+    {
+      "day": "Friday",
+      "value": "5"
+    }
+  ],
   "properties": [
     {
       "key": "Board",
